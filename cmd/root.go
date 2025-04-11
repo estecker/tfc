@@ -28,8 +28,4 @@ func Execute() {
 func init() {
 	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "c", "", "config file (default is $HOME/.tfc.yaml)")
 	rootCmd.PersistentFlags().BoolVarP(&verbose, "verbose", "v", false, "verbose output")
-
-	rootCmd.AddCommand(workspacesCmd)
-	rootCmd.AddCommand(backupCmd)
-	rootCmd.AddCommand(runsCmd)
 }

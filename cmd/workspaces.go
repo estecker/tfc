@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"github.com/estecker/tfc/internal/tfc"
 	"github.com/spf13/cobra"
+	"tfc/internal/tfc"
 )
 
 var workspacesCmd = &cobra.Command{
@@ -44,7 +44,7 @@ var Status string
 var ID string
 
 func init() {
-
+	rootCmd.AddCommand(workspacesCmd)
 	workspacesCmd.PersistentFlags().StringVarP(&org, "org", "o", "", "Terraform Cloud Organization (required)")
 
 	workspacesCmd.Flags().StringVar(&Search, "search", "", "A search string (partial workspace name) used to filter the results.")

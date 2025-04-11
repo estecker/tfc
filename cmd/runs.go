@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"github.com/estecker/tfc/internal/tfc"
 	"github.com/spf13/cobra"
+	"tfc/internal/tfc"
 )
 
 var Workspaces []string
@@ -47,6 +47,7 @@ var runsLogCmd = &cobra.Command{
 }
 
 func init() {
+	rootCmd.AddCommand(runsCmd)
 	runsCmd.Flags().StringSliceVarP(&Workspaces, "workspace-ids", "w", []string{}, "A comma seperated list of workspace ID's to run")
 	_ = runsCmd.MarkFlagRequired("workspace-ids")
 	runsCmd.Flags().BoolVar(&Force, "force", false, "https://developer.hashicorp.com/terraform/cloud-docs/api-docs/run#forcefully-execute-a-run")

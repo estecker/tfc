@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"github.com/estecker/tfc/internal/tfc"
 	"github.com/spf13/cobra"
+	"tfc/internal/tfc"
 )
 
 var Problem string

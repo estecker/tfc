@@ -1,6 +1,6 @@
 package main
 
-import "github.com/estecker/tfc/cmd"
+import "tfc/cmd"
 
 func main() {
 	cmd.Execute()
