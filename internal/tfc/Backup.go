@@ -94,9 +94,9 @@ func BackupOrgMembershipCmd(Org string, Folder string) error {
 	for _, om := range oml {
 		fullPath := filepath.Join(Folder, om.User.ID)
 		// Build the content string
-		content := fmt.Sprintf("%s:%s", om.User.ID, om.Email)
+		content := fmt.Sprintf("%s", om.Email)
 		for _, t := range om.Teams {
-			content += fmt.Sprintf(",%s", t.Name)
+			content += fmt.Sprintf("\n%s", t.Name)
 		}
 		content += "\n"
 
