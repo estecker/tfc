@@ -43,4 +43,3 @@ TODO refresh?
   * - [ ]  Settings
   * - [ ]  Or other non-operational changes
 
-${TFE} runs --run-id ${tfcc} --log-output true | grep change_summary | jq '."@message"'
