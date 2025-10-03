@@ -1,4 +1,5 @@
-# Goals
+# This tool helps one perform operations across large amounts of workspaces
+# Tasks
 * Re-run all failed workspaces
   * `for ws in $(tfc workspaces --org <yourorg> --status errored );do tfc runs --workspace-ids ${ws};done`
 * Clear all pending plan/applies, then trigger a fresh plan/apply
